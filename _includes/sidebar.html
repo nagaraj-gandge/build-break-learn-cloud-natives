@@ -3,12 +3,12 @@
     {% for item in site.data.sections %}
     {% assign section_root = '/' | append: item.path %}
     {% assign subpages = site.pages | where_exp: "p", "p.url != section_root and p.url contains section_root" | sort: "url" %}
-    <details class="sidebar-section" {% if page.url contains section_root %}open{% endif %}>
-        <summary>{{ item.title }}</summary>
+    <details class="sidebar-section{% if page.url contains section_root %} is-current{% endif %}" {% if page.url contains section_root %}open{% endif %}>
+        <summary><span class="section-icon" aria-hidden="true">{{ item.title | slice: 0, 1 }}</span>{{ item.title }}</summary>
         <ul>
-            <li><a href="{{ section_root | relative_url }}" {% if page.url == section_root %}class="active" aria-current="page"{% endif %}>Overview</a></li>
+            <li><a href="{{ section_root | relative_url }}" class="sidebar-link{% if page.url == section_root %} active{% endif %}" {% if page.url == section_root %}aria-current="page"{% endif %}>Overview</a></li>
             {% for subpage in subpages %}
-            <li><a href="{{ subpage.url | relative_url }}" {% if page.url == subpage.url %}class="active" aria-current="page"{% endif %}>{{ subpage.title | default: subpage.name }}</a></li>
+            <li><a href="{{ subpage.url | relative_url }}" class="sidebar-link{% if page.url == subpage.url %} active{% endif %}" {% if page.url == subpage.url %}aria-current="page"{% endif %}>{{ subpage.title | default: subpage.name }}</a></li>
             {% endfor %}
         </ul>
     </details>

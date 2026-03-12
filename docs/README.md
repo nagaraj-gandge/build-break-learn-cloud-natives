@@ -1,3 +1,8 @@
+---
+layout: page
+title: Documentation
+permalink: /docs/
+---
 
 # Jekyll Portfolio with Topics (GitHub Pages Ready)
 
@@ -30,4 +35,4 @@ A modern portfolio template that also includes a **Topics** section with pre-cre
 - **Topics**: Add more pages under any topic directory, e.g. `/Kubernetes/architecture.md`.
 
 ## Deploy
-Push to GitHub and enable **Settings → Pages**. Select `Deploy from a branch` and choose `main`.
+Push to GitHub and enable **Settings â†’ Pages**. Select `Deploy from a branch` and choose `main`.

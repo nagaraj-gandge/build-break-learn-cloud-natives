@@ -1,5 +1,4 @@
-
----
+﻿---
 layout: default
 ---
 <section>
@@ -16,10 +15,11 @@ layout: default
 
 <section>
     <h2>Topics</h2>
-    <p>Explore my notes and write‑ups organized by topic.</p>
+    <p>Explore my notes and write-ups organized by topic.</p>
     <ul class="topics">
         {% for item in site.data.sections %}
         <li><a href="{{ '/' | append: item.path | relative_url }}">{{ item.title }}</a></li>
         {% endfor %}
     </ul>
 </section>
+
