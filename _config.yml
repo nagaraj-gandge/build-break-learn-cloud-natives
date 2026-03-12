@@ -2,7 +2,7 @@
 title: "My Portfolio"
 description: "A modern portfolio built with Jekyll for GitHub Pages."
 url: "https://example.github.io"
-baseurl: ""
+baseurl: "/jekyll_portfolio_with_sections"
 theme: minima
 
 plugins:
